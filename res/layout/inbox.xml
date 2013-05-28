@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" 
+>
+
+    <Button
+        android:id="@+id/inbox_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="terug" 
+        android:onClick="terug" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="mail" 
+        android:onClick="email" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail"
+        android:text="@string/mail" 
+        android:onClick="read" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail1"
+        android:text="@string/mail" 
+        android:onClick="read" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail2"
+        android:text="@string/mail" 
+        android:onClick="read" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail3"
+        android:text="@string/mail" 
+        android:onClick="read"  
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail4"
+        android:text="@string/mail" 
+        android:onClick="read"  
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail5"
+        android:text="@string/mail" 
+        android:onClick="read" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail6"
+        android:text="@string/mail" 
+        android:onClick="read" 
+    />
+    
+    <Button
+        android:id="@+id/inbox_mail8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inbox_mail7"
+        android:text="@string/mail" 
+        android:onClick="read" 
+    />
+    
+</RelativeLayout>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" 
+>
+
+    
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:stretchColumns="*"
+    android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+ 
+    <!-- 2 columns -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+ 
+        <TextView 
+        android:id="@+id/con_text_voornaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:hint="voornaam: " 
+    />
+    <EditText 
+        android:id="@+id/con_input_voornaam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/con_text_voornaam"
+        android:hint="voornaam" 
+    />
+    </TableRow>
+ 
+    <!-- edittext span 2 column -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+ 
+        <TextView 
+        android:id="@+id/con_text_achternaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_below="@id/con_text_voornaam"
+        android:hint="achternaam: " 
+        />
+        <EditText 
+        android:id="@+id/con_input_achternaam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/con_text_achternaam"
+        android:layout_below="@id/con_input_voornaam"
+        android:hint="achternaam" 
+        />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    >
+    
+        <TextView 
+        android:id="@+id/con_text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_below="@id/con_text_achternaam"
+        android:hint="email: " 
+        />
+        <EditText 
+        android:id="@+id/con_input_email"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/con_text_email"
+        android:layout_below="@id/con_input_achternaam"
+        android:hint="email" 
+        />
+    
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    >
+    
+        <TextView 
+        android:id="@+id/con_text_telefoonnummer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_below="@id/con_text_email"
+        android:hint="telefoonnummer: " 
+        />
+        <EditText 
+        android:id="@+id/con_input_telefoonnummer"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/con_text_telefoonnummer"
+        android:layout_below="@id/con_input_email"
+        android:hint="telefoonnummer" 
+        />
+    
+    </TableRow>
+    
+    </TableLayout>
+    
+    
+    
+    <Button
+        android:id="@+id/con_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="save"
+        android:onClick="save"  
+    />
+    
+</RelativeLayout>
+
+
