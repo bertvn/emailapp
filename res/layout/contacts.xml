@@ -7,24 +7,20 @@
 >
 
     
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:stretchColumns="*"
-    android:id="@+id/tableLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
- 
-    <!-- 2 columns -->
-    <TableRow
-        android:id="@+id/tableRow1"
+    <LinearLayout
+        android:id="@+id/con_lay01"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        >
- 
+        android:weightSum="2"
+        android:orientation="horizontal"
+    >
+        
+    
         <TextView 
         android:id="@+id/con_text_voornaam"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_weight="1.5"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         android:hint="voornaam: " 
@@ -33,97 +29,101 @@
         android:id="@+id/con_input_voornaam"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/con_text_voornaam"
+        android:layout_weight="0.5"
         android:hint="voornaam" 
     />
-    </TableRow>
- 
-    <!-- edittext span 2 column -->
-    <TableRow
-        android:id="@+id/tableRow2"
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/con_lay02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        >
+        android:weightSum="2.0"
+        android:orientation="horizontal"
+        android:layout_below="@id/con_lay01"
+    >
+    
  
         <TextView 
         android:id="@+id/con_text_achternaam"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_weight="1.5"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
-        android:layout_below="@id/con_text_voornaam"
-        android:hint="achternaam: " 
+        android:hint="achternm: " 
         />
         <EditText 
         android:id="@+id/con_input_achternaam"
+        android:layout_weight="0.5"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/con_text_achternaam"
-        android:layout_below="@id/con_input_voornaam"
         android:hint="achternaam" 
         />
-    </TableRow>
+        
+        </LinearLayout>
     
-    <TableRow
-        android:id="@+id/tableRow3"
+    <LinearLayout
+        android:id="@+id/con_lay03"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_below="@id/con_lay02"
     >
+
     
         <TextView 
         android:id="@+id/con_text_email"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_weight="1.5"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
-        android:layout_below="@id/con_text_achternaam"
         android:hint="email: " 
         />
         <EditText 
         android:id="@+id/con_input_email"
+        android:layout_weight="0.5"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/con_text_email"
-        android:layout_below="@id/con_input_achternaam"
         android:hint="email" 
         />
     
-    </TableRow>
+
+        
+        </LinearLayout>
     
-    <TableRow
-        android:id="@+id/tableRow4"
+    <LinearLayout
+        android:id="@+id/con_lay04"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_below="@id/con_lay03"
     >
     
         <TextView 
         android:id="@+id/con_text_telefoonnummer"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_weight="1.5"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
-        android:layout_below="@id/con_text_email"
-        android:hint="telefoonnummer: " 
+        
+        android:hint="telenr: " 
         />
         <EditText 
         android:id="@+id/con_input_telefoonnummer"
-        android:layout_width="450dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/con_text_telefoonnummer"
-        android:layout_below="@id/con_input_email"
+        android:layout_weight="0.5"
         android:hint="telefoonnummer" 
         />
     
-    </TableRow>
-    
-    </TableLayout>
-    
+
+    </LinearLayout>
     
     
     <Button
