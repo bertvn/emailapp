@@ -1,0 +1,1 @@
+python C:\Users\Bert\Documents\NetBeansProjects\Email\gitstats\gitstats C:\Users\Bert\Documents\NetBeansProjects\Email C:\Users\Bert\Documents\gitstats 

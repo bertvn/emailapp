@@ -10,8 +10,7 @@
         android:id="@+id/settings_email"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="test@tester.test" 
-        android:editable="false"
+        android:hint="test@tester.test"
     />
     
     <EditText 
@@ -20,7 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/settings_email"
         android:hint="******" 
-        android:editable="false"
     />
     
     <Button
