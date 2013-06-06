@@ -13,6 +13,9 @@ import android.widget.EditText;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.preference.PreferenceManager;
 
 /**
  *
@@ -45,10 +48,16 @@ public class Settings extends Activity {
         EditText pass = (EditText) findViewById(R.id.settings_password);
         String password = (String) pass.getText().toString();
 
-        EmailPass ep = new EmailPass(emailadress,password);
-        
+        EmailPass ep = new EmailPass(emailadress, password);
+
         changePassword(ep);
-        
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        Editor editor = sp.edit();
+        editor.putString("username", emailadress);
+        editor.putString("password", password);
+        editor.commit();
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
