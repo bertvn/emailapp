@@ -20,13 +20,6 @@
         android:layout_below="@id/receiver"
         android:hint="subject" 
     />
-    <EditText 
-        android:id="@+id/cc"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/subject"
-        android:hint="cc" 
-    />
     
     <Button
         android:id="@+id/button2"
@@ -42,7 +35,7 @@
         android:id="@+id/message"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/cc"
+        android:layout_below="@id/subject"
         android:layout_above="@id/button2"
         android:hint="message" 
         android:gravity="top" 

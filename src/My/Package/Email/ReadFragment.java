@@ -11,6 +11,8 @@ import android.view.View;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import java.util.List;
 
 /**
  *
@@ -20,6 +22,9 @@ public class ReadFragment extends Fragment {
 
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
+    private View v;
+    private DatabaseHandler dbh;
+    private List<Mail> mails;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, 
@@ -32,7 +37,22 @@ public class ReadFragment extends Fragment {
             mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
         }
 
+        dbh = new DatabaseHandler(MainActivity.context);
+        mails = dbh.getAllMessages();
+        
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.read_mail, container, false);
+        v = inflater.inflate(R.layout.read_mail, container, false);
+        return v;
+    }
+    
+    public void selectMail(int i){
+        EditText sender = (EditText) v.findViewById(R.id.reader_sender);
+        EditText subject = (EditText) v.findViewById(R.id.reader_subject);
+        EditText content = (EditText) v.findViewById(R.id.reader_message);
+        
+        sender.setText(mails.get(i).getSender());
+        subject.setText(mails.get(i).getSubject());
+        content.setText(mails.get(i).getText());
+
     }
 }

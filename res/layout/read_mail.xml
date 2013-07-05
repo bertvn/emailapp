@@ -22,20 +22,12 @@
         android:hint="subject" 
         android:editable="false" 
     />
-    <EditText 
-        android:id="@+id/reader_cc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/reader_subject"
-        android:hint="cc"
-        android:editable="false"
-    />
     
     <EditText
         android:id="@+id/reader_message"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/reader_cc"
+        android:layout_below="@id/reader_subject"
         android:hint="message" 
         android:editable="false"
         android:gravity="top" 

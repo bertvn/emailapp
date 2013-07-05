@@ -16,6 +16,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  *
@@ -32,6 +35,32 @@ public class Settings extends Activity {
         super.onCreate(icicle);
         // ToDo add your GUI initialization code here 
         setContentView(R.layout.settings);
+
+        Bundle extra = getIntent().getExtras();
+        Boolean firstRun = extra.getBoolean("firstRun");
+
+        if (firstRun) {
+            Log.v("firstRun", "true");
+            TextView tv = (TextView) findViewById(R.id.settings_text);
+            tv.setText(R.string.settings_firstrun);
+            Button terug = (Button) findViewById(R.id.settings_terug);
+            terug.setVisibility(View.GONE);
+            Button save = (Button) findViewById(R.id.settings_edit);
+            save.setText("Save");
+            
+        } else {
+            Log.v("firstRun", "false");
+            SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(this);
+            String emailadress = p.getString("username", null);
+            String password = p.getString("password", null);
+
+            EditText email = (EditText) findViewById(R.id.settings_email);
+            EditText pass = (EditText) findViewById(R.id.settings_password);
+            
+            email.setText(emailadress);
+            pass.setText(password);
+        }
+        
 
     }
 

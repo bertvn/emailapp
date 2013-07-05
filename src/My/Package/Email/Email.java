@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 /**
  *
@@ -29,8 +30,13 @@ public class Email extends Activity {
     }
     
     public void email(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        EditText subject = (EditText) findViewById(R.id.subject);
+        EditText adress = (EditText) findViewById(R.id.receiver);
+        EditText message = (EditText) findViewById(R.id.message);
+        
+        new SendMailTLS(subject.getEditableText().toString(),adress.getEditableText().toString(), message.getEditableText().toString(), this);
+        
+        super.finish();
 
     }
     
